@@ -1,3 +1,9 @@
+/**
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
+ *
+ * Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of for...of loops.
+ */
+
 const range = {
   start: 0,
   stop: 100,
