@@ -17,12 +17,15 @@ async function* getPostByUser(user) {
 
 getUser()
   .then(async (users) => {
-    const userItarator = await getPostByUser(users);
-    await userItarator.next();
-    await userItarator.next();
-    await userItarator.next();
-    await userItarator.next();
-    console.log((await userItarator.next()).value);
+    // const userItarator = await getPostByUser(users);
+    // await userItarator.next();
+    // await userItarator.next();
+    // await userItarator.next();
+    // await userItarator.next();
+    // console.log((await userItarator.next()).value);
+    for await (let v of getPostByUser(users)) {
+      console.log(v.map((d) => d.title));
+    }
   })
   .catch((e) => {
     console.log(e);
